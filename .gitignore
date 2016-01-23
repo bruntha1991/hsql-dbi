@@ -1,0 +1,14 @@
+.gradle
+gradle-app.setting
+.*.sw?
+*~
+*.bak
+/local*
+/classes
+/data
+/test-classes
+/test-results
+/tmp
+/.classpath
+/.project
+/doc
