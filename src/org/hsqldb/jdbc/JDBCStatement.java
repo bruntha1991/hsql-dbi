@@ -631,6 +631,7 @@ public class JDBCStatement extends JDBCStatementBase implements Statement {
      * @see #getUpdateCount
      * @see #getMoreResults
      */
+    //Executing here
     public synchronized boolean execute(String sql) throws SQLException {
 
         fetchResult(sql, StatementTypes.RETURN_ANY,
@@ -1543,6 +1544,7 @@ public class JDBCStatement extends JDBCStatementBase implements Statement {
     public synchronized boolean execute(
             String sql, int[] columnIndexes) throws SQLException {
 
+
         if (columnIndexes == null || columnIndexes.length == 0) {
             throw Util.invalidArgument("columnIndexes");
         }
@@ -1814,12 +1816,15 @@ public class JDBCStatement extends JDBCStatementBase implements Statement {
         if (isEscapeProcessing) {
             sql = connection.nativeSQL(sql);
         }
+
         resultOut.setPrepareOrExecuteProperties(sql, maxRows, fetchSize,
                 statementRetType, queryTimeout, rsProperties, generatedKeys,
                 generatedIndexes, generatedNames);
 
+
         try {
             resultIn = connection.sessionProxy.execute(resultOut);
+            //System.out.println("here no issue 2");
 
             performPostExecute();
         } catch (HsqlException e) {
@@ -1829,6 +1834,7 @@ public class JDBCStatement extends JDBCStatementBase implements Statement {
         if (resultIn.isError()) {
             throw Util.sqlException(resultIn);
         }
+
 
         if (resultIn.isData()) {
             currentResultSet = new JDBCResultSet(connection, this, resultIn,

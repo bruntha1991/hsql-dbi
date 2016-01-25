@@ -139,6 +139,13 @@ class DatabaseManagerCommon {
     static String[] dropIndexHelp  = {
         "DROP INDEX ", "DROP INDEX table.index"
     };
+    static String[] createFullTextIndexHelp = {
+            "CREATE FULL_TEXT_INDEX ",
+            "CREATE [UNIQUE] FULL_TEXT_INDEX full_text_index ON \n" + "table (column [, ...])"
+    };
+    static String[] dropFullTextIndexHelp = {
+            "DROP FULL_TEXT_INDEX ", "DROP FULL_TEXT_INDEX table.full_text_index"
+    };
     static String[] checkpointHelp = {
         "CHECKPOINT", "(HSQLDB SQL only)"
     };

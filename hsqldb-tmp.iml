@@ -19,6 +19,6 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="ant" level="project" />
+    <orderEntry type="library" name="ant-1.7.0" level="project" />
   </component>
 </module>

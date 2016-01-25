@@ -427,6 +427,7 @@ implements ActionListener, WindowListener, KeyListener {
         String[] sitems = {
             "SSELECT", "IINSERT", "UUPDATE", "DDELETE", "--", "-CREATE TABLE",
             "-DROP TABLE", "-CREATE INDEX", "-DROP INDEX", "--", "-CHECKPOINT",
+            "-CREATE FULL_TEXT_INDEX","-DROP FULL_TEXT_INDEX", "--",
             "-SCRIPT", "-SET", "-SHUTDOWN", "--", "-Test Script"
         };
 
@@ -546,7 +547,11 @@ implements ActionListener, WindowListener, KeyListener {
 
     public void actionPerformed(ActionEvent ev) {
 
+
+        //ev.toString=java.awt.event.ActionEvent[ACTION_PERFORMED,cmd=CREATE FULLTEXT INDEX,when=1453700076698,modifiers=] on menuitem1
+
         String s = ev.getActionCommand();
+       //CREATE FULLTEXT INDEX
 
         if (s == null) {
             if (ev.getSource() instanceof MenuItem) {
@@ -756,7 +761,13 @@ implements ActionListener, WindowListener, KeyListener {
             showHelp(DatabaseManagerCommon.createIndexHelp);
         } else if (s.equals("DROP INDEX")) {
             showHelp(DatabaseManagerCommon.dropIndexHelp);
-        } else if (s.equals("CHECKPOINT")) {
+        } else if (s.equals("CREATE FULL_TEXT_INDEX")) {
+            showHelp(DatabaseManagerCommon.createFullTextIndexHelp);
+        }
+        else if (s.equals("DROP FULL_TEXT_INDEX")) {
+            showHelp(DatabaseManagerCommon.dropFullTextIndexHelp);
+        }
+        else if (s.equals("CHECKPOINT")) {
             showHelp(DatabaseManagerCommon.checkpointHelp);
         } else if (s.equals("SCRIPT")) {
             showHelp(DatabaseManagerCommon.scriptHelp);
@@ -835,7 +846,6 @@ implements ActionListener, WindowListener, KeyListener {
 
         if (sCmd.startsWith("-->>>TEST<<<--")) {
             testPerformance();
-
             return;
         }
 
