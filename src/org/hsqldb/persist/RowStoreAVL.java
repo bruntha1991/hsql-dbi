@@ -50,6 +50,9 @@ import org.hsqldb.navigator.RowIterator;
 import org.hsqldb.rowio.RowInputInterface;
 import org.hsqldb.types.Type;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /*
  * Base implementation of PersistentStore for different table types.
  *
@@ -318,6 +321,77 @@ public abstract class RowStoreAVL implements PersistentStore {
         }
     }
 
+    public void resetFullTextAccessorKeys(Index[] keys) {
+        System.out.println("came inside RowStoreAVL resetFullTextAccessorKeys");
+        Index[] oldIndexList = indexList;
+
+        if (indexList.length == 0 || accessorList[0] == null) {
+            indexList    = keys;
+            accessorList = new CachedObject[indexList.length];
+
+            return;
+        }
+
+        // method might be called twice
+        if (indexList == keys) {
+            return;
+        }
+
+        CachedObject[] oldAccessors = accessorList;
+        int            limit        = indexList.length;
+        int            diff         = keys.length - indexList.length;
+        int            position     = 0;
+
+        if (diff < -1) {
+            throw Error.runtimeError(ErrorCode.U_S0500, "RowStoreAV");
+        } else if (diff == -1) {
+            limit = keys.length;
+        } else if (diff == 0) {
+            throw Error.runtimeError(ErrorCode.U_S0500, "RowStoreAV");
+        } else if (diff == 1) {
+            ;
+        } else {
+            for (; position < limit; position++) {
+                if (indexList[position] != keys[position]) {
+                    break;
+                }
+            }
+
+            Index[] tempKeys = (Index[]) ArrayUtil.toAdjustedArray(indexList,
+                    null, position, 1);
+
+            tempKeys[position] = keys[position];
+
+            resetAccessorKeys(tempKeys);
+            resetAccessorKeys(keys);
+
+            return;
+        }
+
+        for (; position < limit; position++) {
+            if (indexList[position] != keys[position]) {
+                break;
+            }
+        }
+
+        accessorList = (CachedObject[]) ArrayUtil.toAdjustedArray(accessorList,
+                null, position, diff);
+        indexList = keys;
+
+        try {
+            if (diff > 0) {
+                insertFullTextIndexNodes(indexList[0], indexList[position]);
+            } else {
+                dropIndexFromRows(indexList[0], oldIndexList[position]);
+            }
+        } catch (HsqlException e) {
+            accessorList = oldAccessors;
+            indexList    = oldIndexList;
+
+            throw e;
+        }
+    }
+
     public Index[] getAccessorKeys() {
         return indexList;
     }
@@ -517,6 +591,66 @@ public abstract class RowStoreAVL implements PersistentStore {
                 newIndex.insert(session, this, row);
             }
             System.out.println("Number of rows inserted: "+rowCount);
+            return true;
+        } catch (java.lang.OutOfMemoryError e) {
+            error = Error.error(ErrorCode.OUT_OF_MEMORY);
+        } catch (HsqlException e) {
+            error = e;
+        }
+
+        // backtrack on error
+        // rowCount rows have been modified
+        it = primaryIndex.firstRow(this);
+
+        for (int i = 0; i < rowCount; i++) {
+            Row     row      = it.getNextRow();
+            NodeAVL backnode = ((RowAVL) row).getNode(0);
+            int     j        = position;
+
+            while (--j > 0) {
+                backnode = backnode.nNext;
+            }
+
+            backnode.nNext = backnode.nNext.nNext;
+        }
+
+        throw error;
+    }
+
+    boolean insertFullTextIndexNodes(Index primaryIndex, Index newIndex) {
+        System.out.println("came inside RowStoreAVL insertIndexNodes");
+
+        int           position = newIndex.getPosition();
+        RowIterator   it       = primaryIndex.firstRow(this);
+        int           rowCount = 0;
+        HsqlException error    = null;
+
+        try {
+            System.out.println("came inside RowStoreAVL insertFullTextIndexNodes");
+            while (it.hasNext()) {
+                Row row = it.getNextRow();
+                //code should be added
+                session.table.put(row.getPos(),row);
+                int col = indexList[position].getColumns()[0];
+
+                String sentences = row.getData()[col].toString();
+                String[] words = sentences.split(" ");
+
+                Map<String, Integer> wordCount = new HashMap<String,Integer>();
+                for (String word: words) {
+                    if (wordCount.containsKey(word)) {
+                        // Map already contains the word key. Just increment it's count by 1
+                        wordCount.put(word, wordCount.get(word) + 1);
+                    } else {
+                        // Map doesn't have mapping for word. Add one with count = 1
+                        wordCount.put(word, 1);
+                    }
+                }
+
+                for (Map.Entry<String, Integer> entry: wordCount.entrySet()) {
+                    session.indexTree.insert(entry.getKey(), row.getPos(), entry.getValue());
+                }
+            }
             return true;
         } catch (java.lang.OutOfMemoryError e) {
             error = Error.error(ErrorCode.OUT_OF_MEMORY);

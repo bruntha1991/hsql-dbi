@@ -137,6 +137,7 @@ public interface PersistentStore {
     void setElementCount(Index key, int size, int uniqueSize);
 
     void resetAccessorKeys(Index[] keys);
+    void resetFullTextAccessorKeys(Index[] keys);
 
     Index[] getAccessorKeys();
 

@@ -240,6 +240,11 @@ public class StatementSchema extends Statement {
                 order = 8;
                 break;
 
+            case StatementTypes.CREATE_FULLTEXT_INDEX :
+                group = StatementTypes.X_SQL_SCHEMA_MANIPULATION;
+                order = 4;
+                break;
+
             case StatementTypes.CREATE_INDEX :
                 group = StatementTypes.X_SQL_SCHEMA_MANIPULATION;
                 order = 4;
@@ -1292,6 +1297,31 @@ public class StatementSchema extends Statement {
                     return Result.newErrorResult(e, sql);
                 }
             }
+            case StatementTypes.CREATE_FULLTEXT_INDEX:{
+                System.out.println("Came inside statement schema CREATE_FULLTEXT_INDEX");
+                Table    table;
+                HsqlName name;
+                int[]    indexColumns;
+                boolean  unique;
+
+                table        = (Table) arguments[0];
+                indexColumns = (int[]) arguments[1];
+                name         = (HsqlName) arguments[2];
+                unique       = ((Boolean) arguments[3]).booleanValue();
+
+                try {
+                    setOrCheckObjectName(session, table.getName(), name, true);
+
+                    TableWorks tableWorks = new TableWorks(session, table);
+
+                    tableWorks.addFullTextIndex(indexColumns, name, unique);
+
+                    break;
+                } catch (HsqlException e) {
+                    return Result.newErrorResult(e, sql);
+                }
+            }
+
             case StatementTypes.COMMENT : {
                 HsqlName name    = (HsqlName) arguments[0];
                 String   comment = (String) arguments[1];

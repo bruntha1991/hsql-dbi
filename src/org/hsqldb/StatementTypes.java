@@ -229,6 +229,7 @@ public interface StatementTypes {
     int COMMENT                     = 1071;
     int CREATE_ALIAS                = 1072;
     int CREATE_INDEX                = 1073;
+    int CREATE_FULLTEXT_INDEX       = 2017;
     int CREATE_USER                 = 1074;
     int DECLARE_VARIABLE            = 1075;
     int DROP_COLUMN                 = 1076;

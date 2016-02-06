@@ -147,7 +147,7 @@ public class StatementSchemaDefinition extends StatementSchema {
                     case StatementTypes.CREATE_COLLATION :
                         result = statements[i].execute(session);
                         break;
-
+                    case StatementTypes.CREATE_FULLTEXT_INDEX:
                     case StatementTypes.CREATE_INDEX :
                     case StatementTypes.CREATE_TRIGGER :
                     case StatementTypes.CREATE_VIEW :

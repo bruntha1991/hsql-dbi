@@ -222,7 +222,6 @@ public class ParserDDL extends ParserRoutine {
         while (token.tokenType != Tokens.ON) {
             checkIsIdentifier();
             list.add(token.tokenString);
-            System.out.println(token.tokenType+"   "+token.tokenString);
             read();
         }
 
@@ -247,7 +246,6 @@ public class ParserDDL extends ParserRoutine {
 
         int[]    indexColumns = readColumnList(table, true);
         String   sql          = getLastPart();
-        System.out.println("Last part: "+ sql);
         Object[] args         = new Object[] {
                 table, indexColumns, indexHsqlName, Boolean.valueOf(unique),
                 qualifiers
@@ -267,7 +265,6 @@ public class ParserDDL extends ParserRoutine {
         String[]      qualifiers = null;
         HsqlArrayList list       = new HsqlArrayList();
 
-        System.out.println(token.tokenType+"   "+token.tokenString);
         read();
 
         indexHsqlName = readNewSchemaObjectName(SchemaObject.INDEX, true);
@@ -275,7 +272,6 @@ public class ParserDDL extends ParserRoutine {
         while (token.tokenType != Tokens.ON) {
             checkIsIdentifier();
             list.add(token.tokenString);
-            System.out.println(token.tokenType+"   "+token.tokenString);
             read();
         }
 
@@ -304,7 +300,7 @@ public class ParserDDL extends ParserRoutine {
                 qualifiers
         };
 
-        return new StatementSchema(sql, StatementTypes.CREATE_INDEX, args,
+        return new StatementSchema(sql, StatementTypes.CREATE_FULLTEXT_INDEX, args,
                 null, new HsqlName[] {
                 database.getCatalogName(), table.getName()
         });
@@ -3244,7 +3240,6 @@ public class ParserDDL extends ParserRoutine {
                                                      isDelimitedIdentifier(),
                                                      SchemaObject.SCHEMA);
 
-                SqlInvariants.checkSchemaNameNotSystem(token.tokenString);
             }
         }
 
@@ -3348,6 +3343,7 @@ public class ParserDDL extends ParserRoutine {
                         case Tokens.USER :
                         case Tokens.UNIQUE :
                             throw unexpectedToken();
+                        case Tokens.FULL_TEXT_INDEX:
                         case Tokens.INDEX :
                             statementType = StatementTypes.CREATE_INDEX;
                             sql = getStatement(position,

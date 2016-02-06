@@ -606,6 +606,38 @@ public class TableWorks {
         return newindex;
     }
 
+    Index addFullTextIndex(int[] col, HsqlName name, boolean unique) {
+
+        Index newindex;
+
+        checkModifyTable();
+
+        if (table.isEmpty(session) || table.isIndexingMutable()) {
+            System.out.println("came inside TableWorks addFullTextIndex");
+            newindex = table.createFullTextIndex(session, name, col, null, null,
+                    unique, false, false);
+        } else {
+            newindex = table.createIndexStructure(name, col, null, null,
+                    unique, false, false);
+
+            Table tn = table.moveDefinition(session, table.tableType, null,
+                    null, newindex, -1, 0, emptySet,
+                    emptySet);
+
+            moveData(table, tn, -1, 0);
+
+            table = tn;
+
+            setNewTableInSchema(table);
+            updateConstraints(table, emptySet);
+        }
+
+        database.schemaManager.addSchemaObject(newindex);
+        database.schemaManager.recompileDependentObjects(table);
+
+        return newindex;
+    }
+
     void addPrimaryKey(Constraint constraint) {
 
         checkModifyTable();
