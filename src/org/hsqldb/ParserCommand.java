@@ -76,7 +76,7 @@ public class ParserCommand extends ParserDDL {
 
     HsqlArrayList compileStatements(String sql, Result cmd) {
 
-        System.out.println("here"+sql);
+        System.out.println("ParserCommand.java compileStatements method"+sql);
 
         HsqlArrayList list = new HsqlArrayList();
         Statement     cs   = null;

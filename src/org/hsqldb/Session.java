@@ -998,11 +998,11 @@ public class Session implements SessionInterface {
 
                 return result;
             }
-            //Execute here
+            //Execute here Prakhash
             case ResultConstants.EXECDIRECT : {
                 Result result = executeDirectStatement(cmd);
 
-             //   System.out.println(result.getType());
+               System.out.println("Executing in EXECDIRECT case in Session.java");
                 result = performPostExecute(cmd, result);
 
                 return result;
@@ -1189,9 +1189,10 @@ public class Session implements SessionInterface {
     public Result executeDirectStatement(Result cmd) {
 
         String        sql = cmd.getMainString();
+
+        System.out.println("Executing in executeDirectStatement method in Session.java "+sql);
         HsqlArrayList list;
         int           maxRows = cmd.getUpdateCount();
-        System.out.println(maxRows);
 
         if (maxRows == -1) {
             sessionContext.currentMaxRows = 0;

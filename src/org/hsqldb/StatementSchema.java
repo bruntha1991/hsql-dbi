@@ -264,6 +264,7 @@ public class StatementSchema extends Statement {
         }
     }
 
+    //Here a calling happens from StatementHandler.java execute
     public Result execute(Session session) {
 
         Result result;

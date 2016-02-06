@@ -274,7 +274,7 @@ public class ParserDDL extends ParserRoutine {
         while (token.tokenType != Tokens.ON) {
             checkIsIdentifier();
             list.add(token.tokenString);
-            System.out.println(token.tokenType+"   "+token.tokenString);
+            System.out.println("compileCreateFullTextIndex Execution : "+token.tokenType+"   "+token.tokenString);
             read();
         }
 
