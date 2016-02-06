@@ -44,6 +44,8 @@ import org.hsqldb.rights.Grantee;
 import org.hsqldb.types.Type;
 import org.hsqldb.types.Types;
 
+import javax.xml.bind.SchemaOutputResolver;
+
 /**
  * The methods in this class perform alterations to the structure of an
  * existing table which may result in a new Table object
@@ -578,9 +580,11 @@ public class TableWorks {
         checkModifyTable();
 
         if (table.isEmpty(session) || table.isIndexingMutable()) {
+            System.out.println("came inside add index if");
             newindex = table.createIndex(session, name, col, null, null,
                                          unique, false, false);
         } else {
+            System.out.println("came inside add index else");
             newindex = table.createIndexStructure(name, col, null, null,
                                                   unique, false, false);
 

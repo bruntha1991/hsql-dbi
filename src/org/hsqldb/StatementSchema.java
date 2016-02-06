@@ -1259,6 +1259,7 @@ public class StatementSchema extends Statement {
                 }
             }
             case StatementTypes.CREATE_INDEX : {
+                System.out.println("Came inside statement schema CREATE_INDEX");
                 Table    table;
                 HsqlName name;
                 int[]    indexColumns;

@@ -418,7 +418,7 @@ public class TableBase {
         long id = database.persistentStoreCollection.getNextId();
         Index newIndex = database.logger.newIndex(name, id, this, cols,
             descending, nullsLast, types, false, unique, constraint, forward);
-
+        System.out.println("Index details: "+name+" "+id);
         return newIndex;
     }
 
@@ -466,6 +466,7 @@ public class TableBase {
 
         if (store != null) {
             try {
+                System.out.println("Came inside Table base add index");
                 store.resetAccessorKeys(indexList);
             } catch (HsqlException e) {
                 indexList = (Index[]) ArrayUtil.toAdjustedArray(indexList,
@@ -501,7 +502,7 @@ public class TableBase {
                                    int[] columns, boolean[] descending,
                                    boolean[] nullsLast, boolean unique,
                                    boolean constraint, boolean forward) {
-
+        System.out.println("came inside table base");
         Index newIndex = createAndAddIndexStructure(session, name, columns,
             descending, nullsLast, unique, constraint, forward);
 

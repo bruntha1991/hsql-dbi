@@ -247,6 +247,7 @@ public class ParserDDL extends ParserRoutine {
 
         int[]    indexColumns = readColumnList(table, true);
         String   sql          = getLastPart();
+        System.out.println("Last part: "+ sql);
         Object[] args         = new Object[] {
                 table, indexColumns, indexHsqlName, Boolean.valueOf(unique),
                 qualifiers

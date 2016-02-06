@@ -427,7 +427,7 @@ implements ActionListener, WindowListener, KeyListener {
         String[] sitems = {
             "SSELECT", "IINSERT", "UUPDATE", "DDELETE", "--", "-CREATE TABLE",
             "-DROP TABLE", "-CREATE INDEX", "-DROP INDEX", "--", "-CHECKPOINT",
-            "-CREATE FULL_TEXT_INDEX","-DROP FULL_TEXT_INDEX", "--",
+            "-CREATE FULL_TEXT_INDEX","-DROP FULL_TEXT_INDEX","-FULL_TEXT_SEARCH", "--",
             "-SCRIPT", "-SET", "-SHUTDOWN", "--", "-Test Script"
         };
 

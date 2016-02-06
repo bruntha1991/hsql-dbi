@@ -677,7 +677,6 @@ public class IndexAVL implements Index {
      * Insert a node into the index
      */
     public void insert(Session session, PersistentStore store, Row row) {
-
         NodeAVL n;
         NodeAVL x;
         boolean isleft       = true;
