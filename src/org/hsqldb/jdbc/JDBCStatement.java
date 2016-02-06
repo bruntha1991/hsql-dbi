@@ -1824,7 +1824,7 @@ public class JDBCStatement extends JDBCStatementBase implements Statement {
 
         try {
             resultIn = connection.sessionProxy.execute(resultOut);
-            //System.out.println("here no issue 2");
+//            System.out.println(resultIn);
 
             performPostExecute();
         } catch (HsqlException e) {

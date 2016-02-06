@@ -673,7 +673,7 @@ public class Tokens {
     static final String        T_IGNORECASE           = "IGNORECASE";
     static final String        T_IMMEDIATELY          = "IMMEDIATELY";
     public static final String T_INDEX                = "INDEX";
-    public static final String T_FULL_TEXT_INDEX                = "FULL_TEXT_INDEX";
+    public static final String T_FULL_TEXT_INDEX      = "FULL_TEXT_INDEX";
     public static final String T_INITIAL              = "INITIAL";
     public static final String T_INTEGRITY            = "INTEGRITY";
     static final String        T_IS_AUTOCOMMIT        = "IS_AUTOCOMMIT";
