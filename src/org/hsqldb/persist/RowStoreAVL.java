@@ -248,7 +248,7 @@ public abstract class RowStoreAVL implements PersistentStore {
     public abstract void setAccessor(Index key, int accessor);
 
     public void resetAccessorKeys(Index[] keys) {
-
+        System.out.println("came inside RowStoreAVL reserAccessorKey");
         Index[] oldIndexList = indexList;
 
         if (indexList.length == 0 || accessorList[0] == null) {
@@ -497,6 +497,7 @@ public abstract class RowStoreAVL implements PersistentStore {
     }
 
     boolean insertIndexNodes(Index primaryIndex, Index newIndex) {
+        System.out.println("came inside RowStoreAVL insertIndexNodes");
 
         int           position = newIndex.getPosition();
         RowIterator   it       = primaryIndex.firstRow(this);
@@ -504,6 +505,7 @@ public abstract class RowStoreAVL implements PersistentStore {
         HsqlException error    = null;
 
         try {
+            System.out.println("going inside IndexAVLMemory insert");
             while (it.hasNext()) {
                 Row row = it.getNextRow();
 
@@ -514,7 +516,7 @@ public abstract class RowStoreAVL implements PersistentStore {
 
                 newIndex.insert(session, this, row);
             }
-
+            System.out.println("Number of rows inserted: "+rowCount);
             return true;
         } catch (java.lang.OutOfMemoryError e) {
             error = Error.error(ErrorCode.OUT_OF_MEMORY);

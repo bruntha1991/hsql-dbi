@@ -936,6 +936,8 @@ public class Session implements SessionInterface {
      * @param cmd the command to execute
      * @return the result of executing the command
      */
+
+
     public synchronized Result execute(Result cmd) {
 
         if (isClosed) {
@@ -996,9 +998,11 @@ public class Session implements SessionInterface {
 
                 return result;
             }
+            //Execute here
             case ResultConstants.EXECDIRECT : {
                 Result result = executeDirectStatement(cmd);
 
+             //   System.out.println(result.getType());
                 result = performPostExecute(cmd, result);
 
                 return result;
@@ -1187,6 +1191,7 @@ public class Session implements SessionInterface {
         String        sql = cmd.getMainString();
         HsqlArrayList list;
         int           maxRows = cmd.getUpdateCount();
+        System.out.println(maxRows);
 
         if (maxRows == -1) {
             sessionContext.currentMaxRows = 0;
@@ -1199,6 +1204,7 @@ public class Session implements SessionInterface {
 
         try {
             list = parser.compileStatements(sql, cmd);
+
         } catch (Exception e) {
             return Result.newErrorResult(e);
         }

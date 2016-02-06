@@ -208,9 +208,106 @@ public class ParserDDL extends ParserRoutine {
         }
     }
 
-    private StatementSchema compileCreateFullTextIndex(boolean b) {
+    StatementSchema compileCreateIndex(boolean unique) {
+
+        Table         table;
+        HsqlName      indexHsqlName;
+        String[]      qualifiers = null;
+        HsqlArrayList list       = new HsqlArrayList();
+        read();
+
+
+        indexHsqlName = readNewSchemaObjectName(SchemaObject.INDEX, true);
+
+        while (token.tokenType != Tokens.ON) {
+            checkIsIdentifier();
+            list.add(token.tokenString);
+            System.out.println(token.tokenType+"   "+token.tokenString);
+            read();
+        }
+
+        qualifiers = new String[list.size()];
+
+        list.toArray(qualifiers);
+        readThis(Tokens.ON);
+
+        table = readTableName();
+
+        HsqlName tableSchema = table.getSchemaName();
+
+        indexHsqlName.setSchemaIfNull(tableSchema);
+
+        indexHsqlName.parent = table.getName();
+
+        if (indexHsqlName.schema != tableSchema) {
+            throw Error.error(ErrorCode.X_42505);
+        }
+
+        indexHsqlName.schema = table.getSchemaName();
+
+        int[]    indexColumns = readColumnList(table, true);
+        String   sql          = getLastPart();
+        System.out.println("Last part: "+ sql);
+        Object[] args         = new Object[] {
+                table, indexColumns, indexHsqlName, Boolean.valueOf(unique),
+                qualifiers
+        };
+
+        return new StatementSchema(sql, StatementTypes.CREATE_INDEX, args,
+                null, new HsqlName[] {
+                database.getCatalogName(), table.getName()
+        });
+    }
+
+    private StatementSchema compileCreateFullTextIndex(boolean unique) {
         //implement here
-        return null;
+
+        Table         table;
+        HsqlName      indexHsqlName;
+        String[]      qualifiers = null;
+        HsqlArrayList list       = new HsqlArrayList();
+
+        System.out.println(token.tokenType+"   "+token.tokenString);
+        read();
+
+        indexHsqlName = readNewSchemaObjectName(SchemaObject.INDEX, true);
+
+        while (token.tokenType != Tokens.ON) {
+            checkIsIdentifier();
+            list.add(token.tokenString);
+            System.out.println(token.tokenType+"   "+token.tokenString);
+            read();
+        }
+
+        qualifiers = new String[list.size()];
+
+        list.toArray(qualifiers);
+        readThis(Tokens.ON);
+        table = readTableName();
+
+        HsqlName tableSchema = table.getSchemaName();
+
+        indexHsqlName.setSchemaIfNull(tableSchema);
+
+        indexHsqlName.parent = table.getName();
+
+        if (indexHsqlName.schema != tableSchema) {
+            throw Error.error(ErrorCode.X_42505);
+        }
+
+        indexHsqlName.schema = table.getSchemaName();
+
+        int[]    indexColumns = readColumnList(table, true);
+        String   sql          = getLastPart();
+        Object[] args         = new Object[] {
+                table, indexColumns, indexHsqlName, Boolean.valueOf(unique),
+                qualifiers
+        };
+
+        return new StatementSchema(sql, StatementTypes.CREATE_INDEX, args,
+                null, new HsqlName[] {
+                database.getCatalogName(), table.getName()
+        });
     }
 
     Statement compileAlter() {
@@ -3112,54 +3209,7 @@ public class ParserDDL extends ParserRoutine {
         c.check = condition;
     }
 
-    StatementSchema compileCreateIndex(boolean unique) {
 
-        Table         table;
-        HsqlName      indexHsqlName;
-        String[]      qualifiers = null;
-        HsqlArrayList list       = new HsqlArrayList();
-
-        read();
-
-        indexHsqlName = readNewSchemaObjectName(SchemaObject.INDEX, true);
-
-        while (token.tokenType != Tokens.ON) {
-            checkIsIdentifier();
-            list.add(token.tokenString);
-            read();
-        }
-
-        qualifiers = new String[list.size()];
-
-        list.toArray(qualifiers);
-        readThis(Tokens.ON);
-
-        table = readTableName();
-
-        HsqlName tableSchema = table.getSchemaName();
-
-        indexHsqlName.setSchemaIfNull(tableSchema);
-
-        indexHsqlName.parent = table.getName();
-
-        if (indexHsqlName.schema != tableSchema) {
-            throw Error.error(ErrorCode.X_42505);
-        }
-
-        indexHsqlName.schema = table.getSchemaName();
-
-        int[]    indexColumns = readColumnList(table, true);
-        String   sql          = getLastPart();
-        Object[] args         = new Object[] {
-            table, indexColumns, indexHsqlName, Boolean.valueOf(unique),
-            qualifiers
-        };
-
-        return new StatementSchema(sql, StatementTypes.CREATE_INDEX, args,
-                                   null, new HsqlName[] {
-            database.getCatalogName(), table.getName()
-        });
-    }
 
     StatementSchema compileCreateSchema() {
 
