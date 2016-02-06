@@ -10,6 +10,7 @@ import java.util.ArrayList;
 public class IndexAVLTree
 {
     private NodeAVL root;
+    private NodeAVL lastIdentified;
 
     public IndexAVLTree()
     {
@@ -102,8 +103,8 @@ public class IndexAVLTree
      * with its left child; then node k1 with new right child */
     private NodeAVL doubleWithRightChild(NodeAVL k1)
     {
-        k1.right = rotateWithLeftChild( k1.right );
-        return rotateWithRightChild( k1 );
+        k1.right = rotateWithLeftChild(k1.right);
+        return rotateWithRightChild(k1);
     }
     /* Functions to count number of nodes */
     public int countNodes()
@@ -140,11 +141,17 @@ public class IndexAVLTree
             else
             {
                 results = r.getData();
+                lastIdentified = r;
                 break;
             }
         }
         return results;
     }
 
-
+    public int getCollectionFrequency(String word){
+        if(lastIdentified!= null && lastIdentified.word.equals(word))
+            return lastIdentified.collectionFrequency;
+        else
+            return 0;
+    }
 }
