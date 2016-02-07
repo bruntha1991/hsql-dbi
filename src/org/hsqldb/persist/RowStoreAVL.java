@@ -632,6 +632,7 @@ public abstract class RowStoreAVL implements PersistentStore {
                 //code should be added
                 Session.table.put(row.getPos(),row);
                 int col = indexList[position].getColumns()[0];
+                Session.colIndex =col;
 
                 String sentences = row.getData()[col].toString();
                 String[] words = sentences.split(" ");

@@ -84,6 +84,7 @@ public class Session implements SessionInterface {
     //Full Text Index Table and Tree
     public static java.util.HashMap<Integer,Row> table = new java.util.HashMap<Integer, Row>();
     public static IndexAVLTree indexTree = new IndexAVLTree();
+    public static int colIndex;
     //
     public Database    database;
     private final User sessionUser;
@@ -1002,7 +1003,6 @@ public class Session implements SessionInterface {
             case ResultConstants.EXECDIRECT : {
                 Result result = executeDirectStatement(cmd);
 
-               System.out.println("Executing in EXECDIRECT case in Session.java");
                 result = performPostExecute(cmd, result);
 
                 return result;
@@ -1190,7 +1190,6 @@ public class Session implements SessionInterface {
 
         String        sql = cmd.getMainString();
 
-        System.out.println("Executing in executeDirectStatement method in Session.java "+sql);
         HsqlArrayList list;
         int           maxRows = cmd.getUpdateCount();
 
@@ -1224,7 +1223,6 @@ public class Session implements SessionInterface {
                 break;
             }
         }
-
         return result;
     }
 

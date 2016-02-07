@@ -66,6 +66,7 @@ import java.awt.image.MemoryImageSource;
 
 import org.hsqldb.lib.RCData;
 import org.hsqldb.lib.java.JavaSystem;
+import org.hsqldb.tfidf.TfIdfMain;
 
 // sqlbob@users 20020401 - patch 1.7.0 by sqlbob (RMP) - enhancements
 // sqlbob@users 20020401 - patch 537501 by ulrivo - command line arguments
@@ -834,6 +835,7 @@ implements ActionListener, WindowListener, KeyListener {
         txtCommand.setText(ifHuge);
     }
 
+
     /**
      * Adjust this method for large strings...ie multi megabtypes.
      */
@@ -851,6 +853,30 @@ implements ActionListener, WindowListener, KeyListener {
             testPerformance();
             return;
         }
+
+
+        if(sCmd.contains("FREE_TEXT")){
+            String[] commandArray=sCmd.split("\\(\"");
+            String sql=commandArray[1].substring(0,commandArray[1].length()-2);
+            System.out.println(sql);
+            TfIdfMain tfIdfMain=new TfIdfMain();
+            try {
+                String[][] dataForUpdate = tfIdfMain.ProcessQuery(sql);
+                String[] head={"ssssss","ddddddd"};
+                gResult.setHead(head);
+                for(int i=0;i<dataForUpdate.length;i++)
+                gResult.addRow(dataForUpdate[i]);
+                iResult=1;
+                updateResult();
+                System.gc();
+                return;
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+        }
+
+
 
         String[] g = new String[1];
 
@@ -895,6 +921,7 @@ implements ActionListener, WindowListener, KeyListener {
 
             addToRecent(txtCommand.getText());
         } catch (SQLException e) {
+            System.out.println(e);
             lTime = System.currentTimeMillis() - lTime;
             g[0]  = "SQL Error";
 
@@ -1100,6 +1127,7 @@ implements ActionListener, WindowListener, KeyListener {
             throw new RuntimeException("IOError: " + e.getMessage());
         }
     }
+
 
     void showResultInText() {
 

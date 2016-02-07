@@ -5,10 +5,10 @@ import java.util.ArrayList;
 /**
  * Created by Ruba on 2/6/2016.
  */
-class Data{
+public class Data{
 
-    int index;
-    int occurence;
+    public int index;
+    public int occurence;
 
     Data(int index, int occurence){
         this.index = index;
