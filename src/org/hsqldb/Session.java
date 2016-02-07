@@ -82,8 +82,8 @@ public class Session implements SessionInterface {
     //
     private volatile boolean isClosed;
     //Full Text Index Table and Tree
-    public java.util.HashMap<Integer,Row> table = new java.util.HashMap<Integer, Row>();
-    public IndexAVLTree indexTree = new IndexAVLTree();
+    public static java.util.HashMap<Integer,Row> table = new java.util.HashMap<Integer, Row>();
+    public static IndexAVLTree indexTree = new IndexAVLTree();
     //
     public Database    database;
     private final User sessionUser;
