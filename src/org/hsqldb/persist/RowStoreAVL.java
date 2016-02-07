@@ -630,7 +630,7 @@ public abstract class RowStoreAVL implements PersistentStore {
             while (it.hasNext()) {
                 Row row = it.getNextRow();
                 //code should be added
-                session.table.put(row.getPos(),row);
+                Session.table.put(row.getPos(),row);
                 int col = indexList[position].getColumns()[0];
 
                 String sentences = row.getData()[col].toString();
@@ -648,7 +648,7 @@ public abstract class RowStoreAVL implements PersistentStore {
                 }
 
                 for (Map.Entry<String, Integer> entry: wordCount.entrySet()) {
-                    session.indexTree.insert(entry.getKey(), row.getPos(), entry.getValue());
+                    Session.indexTree.insert(entry.getKey(), row.getPos(), entry.getValue());
                 }
             }
             return true;
