@@ -14,6 +14,7 @@ public class NodeAVL
     int height;
     ArrayList<Data> datas=new ArrayList<Data>();
     int collectionFrequency = 0;
+    public static int totalNodesCreated =0;
 
     public NodeAVL()
     {
@@ -26,6 +27,7 @@ public class NodeAVL
 
     public NodeAVL(String word,int index,int occurence)
     {
+        totalNodesCreated++;
         left = null;
         right = null;
         this.word = word;

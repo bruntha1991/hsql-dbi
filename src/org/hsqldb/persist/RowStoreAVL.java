@@ -659,6 +659,7 @@ public abstract class RowStoreAVL implements PersistentStore {
                 for (Map.Entry<String, Integer> entry: wordCount.entrySet()) {
                     Session.indexTree.insert(entry.getKey(), row.getPos(), entry.getValue());
                 }
+                System.out.println("Total nodes created in the AVL tree : "+ org.hsqldb.fullTextIndex.NodeAVL.totalNodesCreated);
             }
             System.out.println("Execution time :"+ (System.currentTimeMillis()-time1));
             return true;
