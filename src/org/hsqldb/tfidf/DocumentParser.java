@@ -49,7 +49,7 @@ public class DocumentParser {
         }
 
     }
-    
+
     /**
      * Method to create termVector according to its tfidf score.
      */

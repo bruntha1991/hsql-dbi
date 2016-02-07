@@ -33,15 +33,13 @@ package org.hsqldb;
 
 import java.io.InputStream;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.GregorianCalendar;
-import java.util.Locale;
-import java.util.Random;
-import java.util.TimeZone;
+import java.util.*;
 
 import org.hsqldb.HsqlNameManager.HsqlName;
 import org.hsqldb.error.Error;
 import org.hsqldb.error.ErrorCode;
+import org.hsqldb.fullTextIndex.IndexAVLTree;
+import org.hsqldb.index.IndexAVL;
 import org.hsqldb.jdbc.JDBCConnection;
 import org.hsqldb.jdbc.JDBCDriver;
 import org.hsqldb.lib.ArrayUtil;
@@ -83,7 +81,9 @@ public class Session implements SessionInterface {
 
     //
     private volatile boolean isClosed;
-
+    //Full Text Index Table and Tree
+    public java.util.HashMap<Integer,Row> table = new java.util.HashMap<Integer, Row>();
+    public IndexAVLTree indexTree = new IndexAVLTree();
     //
     public Database    database;
     private final User sessionUser;

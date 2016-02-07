@@ -389,10 +389,24 @@ public class TableBase {
             boolean forward) {
 
         Index newindex = createIndexStructure(name, columns, descending,
-                                              nullsLast, unique, constraint,
-                                              forward);
+                nullsLast, unique, constraint,
+                forward);
 
         addIndex(session, newindex);
+
+        return newindex;
+    }
+
+    public final Index createAndAddFullTextIndexStructure(Session session,
+                                                  HsqlName name, int[] columns, boolean[] descending,
+                                                  boolean[] nullsLast, boolean unique, boolean constraint,
+                                                  boolean forward) {
+
+        Index newindex = createIndexStructure(name, columns, descending,
+                nullsLast, unique, constraint,
+                forward);
+
+        addFullTextIndex(session, newindex);
 
         return newindex;
     }
@@ -417,8 +431,8 @@ public class TableBase {
 
         long id = database.persistentStoreCollection.getNextId();
         Index newIndex = database.logger.newIndex(name, id, this, cols,
-            descending, nullsLast, types, false, unique, constraint, forward);
-        System.out.println("Index details: "+name+" "+id);
+                descending, nullsLast, types, false, unique, constraint, forward);
+        System.out.println("Index details: " + name + " " + id);
         return newIndex;
     }
 
@@ -446,7 +460,6 @@ public class TableBase {
     final void addIndex(Session session, Index index) {
 
         int i = 0;
-
         for (; i < indexList.length; i++) {
             Index current = indexList[i];
             int order = index.getIndexOrderValue()
@@ -466,8 +479,47 @@ public class TableBase {
 
         if (store != null) {
             try {
-                System.out.println("Came inside Table base add index");
+                System.out.println("Came insidee");
                 store.resetAccessorKeys(indexList);
+            } catch (HsqlException e) {
+                indexList = (Index[]) ArrayUtil.toAdjustedArray(indexList,
+                        null, index.getPosition(), -1);
+
+                for (i = 0; i < indexList.length; i++) {
+                    indexList[i].setPosition(i);
+                }
+
+                throw e;
+            }
+        }
+
+        setBestRowIdentifiers();
+    }
+
+    final void addFullTextIndex(Session session, Index index) {
+
+        int i = 0;
+        for (; i < indexList.length; i++) {
+            Index current = indexList[i];
+            int order = index.getIndexOrderValue()
+                    - current.getIndexOrderValue();
+
+            if (order < 0) {
+                break;
+            }
+        }
+
+        indexList = (Index[]) ArrayUtil.toAdjustedArray(indexList, index, i,
+                1);
+
+        for (i = 0; i < indexList.length; i++) {
+            indexList[i].setPosition(i);
+        }
+
+        if (store != null) {
+            try {
+                System.out.println("Came inside TableBase addFullTextIndex");
+                store.resetFullTextAccessorKeys(indexList);
             } catch (HsqlException e) {
                 indexList = (Index[]) ArrayUtil.toAdjustedArray(indexList,
                         null, index.getPosition(), -1);
@@ -505,6 +557,17 @@ public class TableBase {
         System.out.println("came inside table base");
         Index newIndex = createAndAddIndexStructure(session, name, columns,
             descending, nullsLast, unique, constraint, forward);
+
+        return newIndex;
+    }
+
+    public final Index createFullTextIndex(Session session, HsqlName name,
+                                   int[] columns, boolean[] descending,
+                                   boolean[] nullsLast, boolean unique,
+                                   boolean constraint, boolean forward) {
+        System.out.println("came inside TableBase createFullTextIndex");
+        Index newIndex = createAndAddFullTextIndexStructure(session, name, columns,
+                descending, nullsLast, unique, constraint, forward);
 
         return newIndex;
     }
