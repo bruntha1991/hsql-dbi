@@ -862,7 +862,7 @@ implements ActionListener, WindowListener, KeyListener {
             TfIdfMain tfIdfMain=new TfIdfMain();
             try {
                 String[][] dataForUpdate = tfIdfMain.ProcessQuery(sql);
-                String[] head={"ssssss","ddddddd"};
+                String[] head={"ID","FIRSTNAME","LASTNAME","STREET","CITY"};
                 gResult.setHead(head);
                 for(int i=0;i<dataForUpdate.length;i++)
                 gResult.addRow(dataForUpdate[i]);

@@ -52,8 +52,23 @@ public class TfIdfMain {
 
         String[][] results = new String[linkedHashMap.size()][Session.table.get(0).getData().length];
 
+        Iterator it=linkedHashMap.keySet().iterator();
+
+        int count = 0;
+
+        while (it.hasNext()){
+            int index = (Integer) it.next();
+            Object[] data = Session.table.get(index).getData();
+            for(int j=0; j<results[count].length; j++) {
+                results[count][j] = data[j].toString();
+            }
+
+            count++;
+        }
+
+
         for(int i=0; i< results.length; i++){
-            results[i] = Arrays.copyOf(Session.table.get(i).getData(), Session.table.get(i).getData().length, String[].class);
+
         }
 
         return results;

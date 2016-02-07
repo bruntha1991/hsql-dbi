@@ -131,7 +131,7 @@ public class IndexAVLTree
     private ArrayList<Data> search(NodeAVL r, String val)
     {
         ArrayList<Data> results = null;
-        while (r != null)
+        while (r != null && results == null)
         {
             String rval = r.word;
             if (val.compareTo( rval) < 0)
@@ -144,6 +144,7 @@ public class IndexAVLTree
                 lastIdentified = r;
                 break;
             }
+            results = search(r, val);
         }
         return results;
     }

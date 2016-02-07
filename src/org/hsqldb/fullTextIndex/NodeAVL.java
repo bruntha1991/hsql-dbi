@@ -37,6 +37,7 @@ public class NodeAVL
     public void insert(int index,int occurence){
         datas.add(new Data(index,occurence));
         collectionFrequency+= occurence;
+        System.out.println(word+" "+collectionFrequency);
     }
 
     public ArrayList<Data> getData(){

@@ -580,6 +580,7 @@ public abstract class RowStoreAVL implements PersistentStore {
 
         try {
             System.out.println("going inside IndexAVLMemory insert");
+
             while (it.hasNext()) {
                 Row row = it.getNextRow();
 
@@ -627,6 +628,7 @@ public abstract class RowStoreAVL implements PersistentStore {
 
         try {
             System.out.println("came inside RowStoreAVL insertFullTextIndexNodes");
+            long time1=System.currentTimeMillis();
             while (it.hasNext()) {
                 Row row = it.getNextRow();
                 //code should be added
@@ -652,6 +654,7 @@ public abstract class RowStoreAVL implements PersistentStore {
                     Session.indexTree.insert(entry.getKey(), row.getPos(), entry.getValue());
                 }
             }
+            System.out.println("Execution time :"+ (System.currentTimeMillis()-time1));
             return true;
         } catch (java.lang.OutOfMemoryError e) {
             error = Error.error(ErrorCode.OUT_OF_MEMORY);
