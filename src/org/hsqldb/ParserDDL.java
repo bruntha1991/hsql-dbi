@@ -3240,6 +3240,7 @@ public class ParserDDL extends ParserRoutine {
                                                      isDelimitedIdentifier(),
                                                      SchemaObject.SCHEMA);
 
+                SqlInvariants.checkSchemaNameNotSystem(token.tokenString);
             }
         }
 

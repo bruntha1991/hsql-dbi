@@ -427,7 +427,7 @@ implements ActionListener, WindowListener, KeyListener {
         String[] sitems = {
             "SSELECT", "IINSERT", "UUPDATE", "DDELETE", "--", "-CREATE TABLE",
             "-DROP TABLE", "-CREATE INDEX", "-DROP INDEX", "--", "-CHECKPOINT",
-            "-CREATE FULL_TEXT_INDEX","-DROP FULL_TEXT_INDEX", "--",
+            "-CREATE FULL_TEXT_INDEX","-DROP FULL_TEXT_INDEX","-FULL_TEXT_SEARCH", "--",
             "-SCRIPT", "-SET", "-SHUTDOWN", "--", "-Test Script"
         };
 
@@ -766,6 +766,9 @@ implements ActionListener, WindowListener, KeyListener {
         }
         else if (s.equals("DROP FULL_TEXT_INDEX")) {
             showHelp(DatabaseManagerCommon.dropFullTextIndexHelp);
+        }
+        else if(s.equals("FULL_TEXT_SEARCH")){
+            showHelp(DatabaseManagerCommon.dearchFullTextIndexHelp);
         }
         else if (s.equals("CHECKPOINT")) {
             showHelp(DatabaseManagerCommon.checkpointHelp);

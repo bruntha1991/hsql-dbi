@@ -208,6 +208,7 @@ public class ClientConnection implements SessionInterface {
         try {
             r.setSessionId(sessionID);
             r.setDatabaseId(databaseID);
+
             write(r);
 
             return read();

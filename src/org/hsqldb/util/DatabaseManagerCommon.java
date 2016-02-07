@@ -146,6 +146,12 @@ class DatabaseManagerCommon {
     static String[] dropFullTextIndexHelp = {
             "DROP FULL_TEXT_INDEX ", "DROP FULL_TEXT_INDEX table.full_text_index"
     };
+    static String[] dearchFullTextIndexHelp = {
+            "SELECT * FROM ",
+            "SELECT * FROM "+"[TABLE] "+"WHERE " +"FREE_TEXT"+"(\"text\")"+"\n"
+            +"SELECT * FROM "+"[TABLE] "+"WHERE " +"FREE_TEXT"+"(COLOUMN,\"text\")"
+
+    };
     static String[] checkpointHelp = {
         "CHECKPOINT", "(HSQLDB SQL only)"
     };
