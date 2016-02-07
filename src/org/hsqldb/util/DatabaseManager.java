@@ -885,7 +885,7 @@ implements ActionListener, WindowListener, KeyListener {
 //                to here it ignores stop words Prakhash
 
                 String[][] dataForUpdate = tfIdfMain.ProcessQuery(sql);
-                String[] head={"ID","FIRSTNAME","LASTNAME","STREET","CITY"};
+                String[] head={"REVIEW_ID","USER_ID","REVIEW"};
                 gResult.setHead(head);
                 for(int i=0;i<dataForUpdate.length;i++)
                 gResult.addRow(dataForUpdate[i]);
