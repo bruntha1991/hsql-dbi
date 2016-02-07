@@ -23,31 +23,20 @@ public class DocumentParser {
 
     /**
      * Method to read files and store in array.
-     * @param filePath : source file path
      * @throws FileNotFoundException
      * @throws IOException
      */
-    public void parseFiles(String filePath) throws FileNotFoundException, IOException {
-        File[] allfiles = new File(filePath).listFiles();
-        BufferedReader in = null;
-        for (File f : allfiles) {
-            if (f.getName().endsWith(".txt")) {
-                in = new BufferedReader(new FileReader(f));
-                StringBuilder sb = new StringBuilder();
-                String s = null;
-                while ((s = in.readLine()) != null) {
-                    sb.append(s);
-                }
-                String[] tokenizedTerms = sb.toString().replaceAll("[\\W&&[^\\s]]", "").split("\\W+");   //to get individual terms
+    public void parseFiles(String[] queries) throws IOException {
+
+        for (String f : queries) {
+                String[] tokenizedTerms = f.split(" ");   //to get individual terms
                 for (String term : tokenizedTerms) {
                     if (!allTerms.contains(term)) {  //avoid duplicate entry
                         allTerms.add(term);
                     }
                 }
                 termsDocsArray.add(tokenizedTerms);
-            }
         }
-
     }
 
     /**
@@ -59,12 +48,12 @@ public class DocumentParser {
         double tfidf; //term requency inverse document frequency
 
             for (int i=0;i<termsDocsArray.size();i++){
-                String[] docTermsArray=( String[])termsDocsArray.get(i);
-            Double[] tfidfvectors = new Double[allTerms.size()];
+                String[] docTermsArray=termsDocsArray.get(i);
+                Double[] tfidfvectors = new Double[allTerms.size()];
             int count = 0;
 
                 for(int j=0;j<allTerms.size();j++){
-                    String terms=(String)allTerms.get(j);
+                    String terms=allTerms.get(j);
                 tf = new TfIdf().tfCalculator(docTermsArray, terms);
                 idf = new TfIdf().idfCalculator(termsDocsArray, terms);
                 tfidf = tf * idf;
@@ -78,13 +67,14 @@ public class DocumentParser {
     /**
      * Method to calculate cosine similarity between all the documents.
      */
-    public void getCosineSimilarity() {
-        for (int i = 0; i < tfidfDocsVector.size(); i++) {
+    public double getCosineSimilarity() {
+        for (int i = 0; i < 1; i++) {
             for (int j = 0; j < tfidfDocsVector.size(); j++) {
-                System.out.println("between " + i + " and " + j + "  =  "
-                                + new CosineSimilarity().cosineSimilarity(tfidfDocsVector.get(i), tfidfDocsVector.get(j))
-                );
+                if(i!=j){
+                    return new CosineSimilarity().cosineSimilarity(tfidfDocsVector.get(i), tfidfDocsVector.get(j));
+                }
             }
         }
+        return 0;
     }
 }

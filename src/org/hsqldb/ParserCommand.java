@@ -133,7 +133,7 @@ public class ParserCommand extends ParserDDL {
 
         if (token.tokenType == Tokens.X_STARTPARSE) {
             read();
-        }`
+        }
 
         switch (token.tokenType) {
 

@@ -2,39 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="408a3432-cb0f-4c3d-a83c-9db2d36b2154" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/hsqldb/fullTextIndex/Data.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/hsqldb/fullTextIndex/IndexAVLTree.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/hsqldb/fullTextIndex/NodeAVL.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/hsqldb-tmp/org/hsqldb/ClientConnection.class" afterPath="$PROJECT_DIR$/out/production/hsqldb-tmp/org/hsqldb/ClientConnection.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/hsqldb-tmp/org/hsqldb/util/DatabaseManager.class" afterPath="$PROJECT_DIR$/out/production/hsqldb-tmp/org/hsqldb/util/DatabaseManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/hsqldb-tmp/org/hsqldb/util/DatabaseManagerCommon.class" afterPath="$PROJECT_DIR$/out/production/hsqldb-tmp/org/hsqldb/util/DatabaseManagerCommon.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/hsqldb-tmp/org/hsqldb/jdbc/JDBCStatement.class" afterPath="$PROJECT_DIR$/out/production/hsqldb-tmp/org/hsqldb/jdbc/JDBCStatement.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/hsqldb-tmp/org/hsqldb/tfidf/DocumentParser.class" afterPath="$PROJECT_DIR$/out/production/hsqldb-tmp/org/hsqldb/tfidf/DocumentParser.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/hsqldb-tmp/org/hsqldb/ParserCommand.class" afterPath="$PROJECT_DIR$/out/production/hsqldb-tmp/org/hsqldb/ParserCommand.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/hsqldb-tmp/org/hsqldb/ParserDDL.class" afterPath="$PROJECT_DIR$/out/production/hsqldb-tmp/org/hsqldb/ParserDDL.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/hsqldb-tmp/org/hsqldb/persist/PersistentStore.class" afterPath="$PROJECT_DIR$/out/production/hsqldb-tmp/org/hsqldb/persist/PersistentStore.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/hsqldb-tmp/org/hsqldb/persist/RowStoreAVL.class" afterPath="$PROJECT_DIR$/out/production/hsqldb-tmp/org/hsqldb/persist/RowStoreAVL.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/hsqldb-tmp/org/hsqldb/Session.class" afterPath="$PROJECT_DIR$/out/production/hsqldb-tmp/org/hsqldb/Session.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/hsqldb-tmp/org/hsqldb/StatementSchema.class" afterPath="$PROJECT_DIR$/out/production/hsqldb-tmp/org/hsqldb/StatementSchema.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/hsqldb-tmp/org/hsqldb/StatementSchemaDefinition.class" afterPath="$PROJECT_DIR$/out/production/hsqldb-tmp/org/hsqldb/StatementSchemaDefinition.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/hsqldb-tmp/org/hsqldb/StatementTypes.class" afterPath="$PROJECT_DIR$/out/production/hsqldb-tmp/org/hsqldb/StatementTypes.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/hsqldb-tmp/org/hsqldb/TableBase.class" afterPath="$PROJECT_DIR$/out/production/hsqldb-tmp/org/hsqldb/TableBase.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/hsqldb-tmp/org/hsqldb/TableWorks.class" afterPath="$PROJECT_DIR$/out/production/hsqldb-tmp/org/hsqldb/TableWorks.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/hsqldb/ClientConnection.java" afterPath="$PROJECT_DIR$/src/org/hsqldb/ClientConnection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/hsqldb/util/DatabaseManager.java" afterPath="$PROJECT_DIR$/src/org/hsqldb/util/DatabaseManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/hsqldb/util/DatabaseManagerCommon.java" afterPath="$PROJECT_DIR$/src/org/hsqldb/util/DatabaseManagerCommon.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/hsqldb-tmp/org/hsqldb/tfidf/TfIdfMain.class" afterPath="$PROJECT_DIR$/out/production/hsqldb-tmp/org/hsqldb/tfidf/TfIdfMain.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/hsqldb/tfidf/DocumentParser.java" afterPath="$PROJECT_DIR$/src/org/hsqldb/tfidf/DocumentParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/hsqldb/jdbc/JDBCStatement.java" afterPath="$PROJECT_DIR$/src/org/hsqldb/jdbc/JDBCStatement.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/hsqldb/ParserCommand.java" afterPath="$PROJECT_DIR$/src/org/hsqldb/ParserCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/hsqldb/ParserDDL.java" afterPath="$PROJECT_DIR$/src/org/hsqldb/ParserDDL.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/hsqldb/persist/PersistentStore.java" afterPath="$PROJECT_DIR$/src/org/hsqldb/persist/PersistentStore.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/hsqldb/persist/RowStoreAVL.java" afterPath="$PROJECT_DIR$/src/org/hsqldb/persist/RowStoreAVL.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/hsqldb/Session.java" afterPath="$PROJECT_DIR$/src/org/hsqldb/Session.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/hsqldb/StatementSchema.java" afterPath="$PROJECT_DIR$/src/org/hsqldb/StatementSchema.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/hsqldb/StatementSchemaDefinition.java" afterPath="$PROJECT_DIR$/src/org/hsqldb/StatementSchemaDefinition.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/hsqldb/StatementTypes.java" afterPath="$PROJECT_DIR$/src/org/hsqldb/StatementTypes.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/hsqldb/TableBase.java" afterPath="$PROJECT_DIR$/src/org/hsqldb/TableBase.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/hsqldb/TableWorks.java" afterPath="$PROJECT_DIR$/src/org/hsqldb/TableWorks.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/hsqldb/tfidf/TfIdfMain.java" afterPath="$PROJECT_DIR$/src/org/hsqldb/tfidf/TfIdfMain.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="hsqldb-tmp.iws" />
@@ -61,51 +34,66 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ParserCommand.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/org/hsqldb/ParserCommand.java">
+      <file leaf-file-name="TfIdf.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/hsqldb/tfidf/TfIdf.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5221053" vertical-offset="1132" max-vertical-offset="31785">
-              <caret line="135" column="10" selection-start-line="135" selection-start-column="10" selection-end-line="135" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="101" max-vertical-offset="750">
+              <caret line="23" column="41" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DatabaseManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/hsqldb/util/DatabaseManager.java">
+      <file leaf-file-name="DocumentParser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/hsqldb/tfidf/DocumentParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.962963" vertical-offset="11989" max-vertical-offset="19845">
-              <caret line="863" column="27" selection-start-line="863" selection-start-column="27" selection-end-line="863" selection-end-column="27" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="680" max-vertical-offset="1155">
+              <caret line="67" column="71" selection-start-line="67" selection-start-column="71" selection-end-line="67" selection-end-column="71" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Session.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/hsqldb/Session.java">
+      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.444445" vertical-offset="15810" max-vertical-offset="30780">
-              <caret line="1206" column="38" selection-start-line="1206" selection-start-column="38" selection-end-line="1206" selection-end-column="38" />
+            <state vertical-scroll-proportion="0.58441556" vertical-offset="0" max-vertical-offset="22005">
+              <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JDBCStatement.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/hsqldb/jdbc/JDBCStatement.java">
+      <file leaf-file-name="vcs.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.074074" vertical-offset="26449" max-vertical-offset="27195">
-              <caret line="1825" column="18" selection-start-line="1825" selection-start-column="18" selection-end-line="1825" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClientConnection.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/hsqldb/ClientConnection.java">
+      <file leaf-file-name="TfIdfMain.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/hsqldb/tfidf/TfIdfMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.259259" vertical-offset="2102" max-vertical-offset="8430">
-              <caret line="210" column="0" selection-start-line="210" selection-start-column="0" selection-end-line="210" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="290" max-vertical-offset="765">
+              <caret line="38" column="24" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="39" />
+              <folding>
+                <element signature="e#256#257#0" expanded="true" />
+                <element signature="e#294#295#0" expanded="true" />
+                <element signature="e#340#341#0" expanded="true" />
+                <element signature="e#378#379#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CosineSimilarity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/hsqldb/tfidf/CosineSimilarity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="37" max-vertical-offset="630">
+              <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -114,11 +102,9 @@
       <file leaf-file-name="DatabaseManagerCommon.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/hsqldb/util/DatabaseManagerCommon.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.11111" vertical-offset="765" max-vertical-offset="4965">
+            <state vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="4935">
               <caret line="153" column="6" selection-start-line="153" selection-start-column="6" selection-end-line="153" selection-end-column="6" />
               <folding>
-                <element signature="e#9552#9553#0" expanded="true" />
-                <element signature="e#9594#9595#0" expanded="true" />
                 <marker date="1454810688443" expanded="true" signature="12082:12332" placeholder="INSERT INTO ..." />
                 <marker date="1454810688443" expanded="true" signature="12368:12548" placeholder="INSERT INTO ..." />
                 <marker date="1454810688443" expanded="true" signature="12635:12727" placeholder="INSERT INTO ..." />
@@ -143,14 +129,14 @@
       <list>
         <option value="$PROJECT_DIR$/src/org/hsqldb/tfidf/TfIdf.java" />
         <option value="$PROJECT_DIR$/src/org/hsqldb/tfidf/CosineSimilarity.java" />
-        <option value="$PROJECT_DIR$/src/org/hsqldb/tfidf/TfIdfMain.java" />
-        <option value="$PROJECT_DIR$/src/org/hsqldb/tfidf/DocumentParser.java" />
-        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/src/org/hsqldb/util/DatabaseManager.java" />
         <option value="$PROJECT_DIR$/src/org/hsqldb/util/DatabaseManagerCommon.java" />
         <option value="$PROJECT_DIR$/src/org/hsqldb/jdbc/JDBCStatement.java" />
         <option value="$PROJECT_DIR$/src/org/hsqldb/ClientConnection.java" />
         <option value="$PROJECT_DIR$/src/org/hsqldb/ParserCommand.java" />
+        <option value="$PROJECT_DIR$/src/org/hsqldb/tfidf/DocumentParser.java" />
+        <option value="$PROJECT_DIR$/src/org/hsqldb/tfidf/TfIdfMain.java" />
+        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
       </list>
     </option>
   </component>
@@ -188,58 +174,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hsqldb-tmp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hsqldb-tmp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hsqldb-tmp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hsqldb-tmp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hsqldb-tmp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="org.hsqldb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hsqldb-tmp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hsqldb-tmp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="org.hsqldb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="auth" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -296,6 +230,94 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="util" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hsqldb-tmp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hsql-dbi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hsqldb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tfidf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hsqldb-tmp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hsql-dbi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value=".idea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hsqldb-tmp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hsqldb-tmp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hsqldb-tmp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hsqldb-tmp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hsqldb-tmp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org.hsqldb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hsqldb-tmp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hsqldb-tmp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org.hsqldb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="auth" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -480,8 +502,9 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="recentsLimit" value="5" />
     <property name="dynamic.classpath" value="false" />
+    <property name="FullScreen" value="false" />
   </component>
-  <component name="RunManager" selected="Application.DatabaseManager">
+  <component name="RunManager" selected="Application.TfIdfMain">
     <configuration default="false" name="DatabaseManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -490,6 +513,28 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="org.hsqldb.util.DatabaseManager" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="hsqldb-tmp" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="TfIdfMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="org.hsqldb.tfidf.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="org.hsqldb.tfidf.TfIdfMain" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -756,12 +801,14 @@
       <envs />
       <method />
     </configuration>
-    <list size="1">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Application.DatabaseManager" />
+      <item index="1" class="java.lang.String" itemvalue="Application.TfIdfMain" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Application.DatabaseManager" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Application.TfIdfMain" />
+        <item index="1" class="java.lang.String" itemvalue="Application.DatabaseManager" />
       </list>
     </recent_temporary>
   </component>
@@ -784,12 +831,13 @@
       <option name="number" value="Default" />
       <updated>1454752680991</updated>
       <workItem from="1454752672835" duration="7097000" />
-      <workItem from="1454809460163" duration="3226000" />
+      <workItem from="1454809460163" duration="6656000" />
+      <workItem from="1454827138300" duration="2686000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10323000" />
+    <option name="totallyTimeSpent" value="16439000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
@@ -813,7 +861,6 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24980783" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988167" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -823,6 +870,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988167" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -942,6 +990,93 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/org/hsqldb/ParserCommand.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1357" max-vertical-offset="31785">
+          <caret line="142" column="32" selection-start-line="142" selection-start-column="32" selection-end-line="142" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/hsqldb/util/DatabaseManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="11989" max-vertical-offset="19845">
+          <caret line="863" column="27" selection-start-line="863" selection-start-column="27" selection-end-line="863" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/hsqldb/Session.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="15810" max-vertical-offset="30780">
+          <caret line="1206" column="38" selection-start-line="1206" selection-start-column="38" selection-end-line="1206" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/hsqldb/tfidf/TfIdf.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="750">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/hsqldb/tfidf/DocumentParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="435" max-vertical-offset="1230">
+          <caret line="39" column="51" selection-start-line="39" selection-start-column="51" selection-end-line="39" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/hsqldb/jdbc/JDBCStatement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="26449" max-vertical-offset="27195">
+          <caret line="1825" column="18" selection-start-line="1825" selection-start-column="18" selection-end-line="1825" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/hsqldb/tfidf/TfIdfMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="435">
+          <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+          <folding>
+            <element signature="e#256#257#0" expanded="true" />
+            <element signature="e#294#295#0" expanded="true" />
+            <element signature="e#340#341#0" expanded="true" />
+            <element signature="e#378#379#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/hsqldb/tfidf/CosineSimilarity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="630">
+          <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/hsqldb/util/DatabaseManagerCommon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="4965">
+          <caret line="153" column="6" selection-start-line="153" selection-start-column="6" selection-end-line="153" selection-end-column="6" />
+          <folding>
+            <marker date="1454810688443" expanded="true" signature="12082:12332" placeholder="INSERT INTO ..." />
+            <marker date="1454810688443" expanded="true" signature="12368:12548" placeholder="INSERT INTO ..." />
+            <marker date="1454810688443" expanded="true" signature="12635:12727" placeholder="INSERT INTO ..." />
+            <marker date="1454810688443" expanded="true" signature="12824:12987" placeholder="INSERT INTO ..." />
+            <marker date="1454810688443" expanded="true" signature="13044:13086" placeholder="UPDATE Produ..." />
+            <marker date="1454810688443" expanded="true" signature="13131:13230" placeholder="UPDATE Item ..." />
+            <marker date="1454810688443" expanded="true" signature="13175:13229" placeholder="SELECT Price..Product..." />
+            <marker date="1454810688443" expanded="true" signature="13275:13381" placeholder="UPDATE Invoi..." />
+            <marker date="1454810688443" expanded="true" signature="13301:13380" placeholder="SELECT SUM(C..Item..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/hsqldb/ParserCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2567" max-vertical-offset="31785">
           <caret line="228" column="22" selection-start-line="228" selection-start-column="22" selection-end-line="228" selection-end-column="22" />
           <folding />
@@ -968,9 +1103,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="765">
           <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -978,9 +1111,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1425">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1005,7 +1136,10 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="450">
           <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="e#256#257#0" expanded="true" />
+            <element signature="e#294#295#0" expanded="true" />
+            <element signature="e#340#341#0" expanded="true" />
+            <element signature="e#378#379#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1014,7 +1148,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="4224" max-vertical-offset="23235">
           <caret line="348" column="41" selection-start-line="348" selection-start-column="41" selection-end-line="348" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1022,10 +1155,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="23250" max-vertical-offset="41355">
           <caret line="1664" column="24" selection-start-line="1664" selection-start-column="24" selection-end-line="1664" selection-end-column="24" />
-          <folding>
-            <element signature="e#52550#52551#0" expanded="false" />
-            <element signature="e#52605#52606#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1040,7 +1169,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.888889" vertical-offset="2811" max-vertical-offset="76245">
           <caret line="255" column="25" selection-start-line="255" selection-start-column="25" selection-end-line="255" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1069,7 +1197,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="4224" max-vertical-offset="23235">
           <caret line="348" column="41" selection-start-line="348" selection-start-column="41" selection-end-line="348" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1077,10 +1204,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1298" max-vertical-offset="41355">
           <caret line="1664" column="24" selection-start-line="1664" selection-start-column="24" selection-end-line="1664" selection-end-column="24" />
-          <folding>
-            <element signature="e#52550#52551#0" expanded="false" />
-            <element signature="e#52605#52606#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1095,6 +1218,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1140">
           <caret line="38" column="6" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1102,72 +1226,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="3036" max-vertical-offset="10725">
           <caret line="237" column="12" selection-start-line="237" selection-start-column="12" selection-end-line="237" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/hsqldb/tfidf/TfIdf.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
-          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/hsqldb/tfidf/TfIdfMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
-          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="600" max-vertical-offset="19695">
-          <caret line="40" column="14" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="14" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/hsqldb/tfidf/CosineSimilarity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="47" max-vertical-offset="630">
-          <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/hsqldb/tfidf/DocumentParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1425">
-          <caret line="0" column="25" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/hsqldb/util/DatabaseManagerCommon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.11111" vertical-offset="765" max-vertical-offset="4965">
-          <caret line="153" column="6" selection-start-line="153" selection-start-column="6" selection-end-line="153" selection-end-column="6" />
-          <folding>
-            <element signature="e#9552#9553#0" expanded="true" />
-            <element signature="e#9594#9595#0" expanded="true" />
-            <marker date="1454810688443" expanded="true" signature="12082:12332" placeholder="INSERT INTO ..." />
-            <marker date="1454810688443" expanded="true" signature="12368:12548" placeholder="INSERT INTO ..." />
-            <marker date="1454810688443" expanded="true" signature="12635:12727" placeholder="INSERT INTO ..." />
-            <marker date="1454810688443" expanded="true" signature="12824:12987" placeholder="INSERT INTO ..." />
-            <marker date="1454810688443" expanded="true" signature="13044:13086" placeholder="UPDATE Produ..." />
-            <marker date="1454810688443" expanded="true" signature="13131:13230" placeholder="UPDATE Item ..." />
-            <marker date="1454810688443" expanded="true" signature="13175:13229" placeholder="SELECT Price..Product..." />
-            <marker date="1454810688443" expanded="true" signature="13275:13381" placeholder="UPDATE Invoi..." />
-            <marker date="1454810688443" expanded="true" signature="13301:13380" placeholder="SELECT SUM(C..Item..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1191,7 +1250,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.259259" vertical-offset="2102" max-vertical-offset="8430">
           <caret line="210" column="0" selection-start-line="210" selection-start-column="0" selection-end-line="210" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1199,21 +1257,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.18929255" vertical-offset="141" max-vertical-offset="1755">
           <caret line="54" column="33" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/hsqldb/jdbc/JDBCStatement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.074074" vertical-offset="26449" max-vertical-offset="27195">
-          <caret line="1825" column="18" selection-start-line="1825" selection-start-column="18" selection-end-line="1825" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/hsqldb/util/DatabaseManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.962963" vertical-offset="11989" max-vertical-offset="19845">
+        <state vertical-scroll-proportion="0.0" vertical-offset="11989" max-vertical-offset="19845">
           <caret line="863" column="27" selection-start-line="863" selection-start-column="27" selection-end-line="863" selection-end-column="27" />
           <folding />
         </state>
@@ -1221,16 +1270,102 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/hsqldb/Session.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.444445" vertical-offset="15810" max-vertical-offset="30780">
+        <state vertical-scroll-proportion="0.0" vertical-offset="15810" max-vertical-offset="30780">
           <caret line="1206" column="38" selection-start-line="1206" selection-start-column="38" selection-end-line="1206" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/hsqldb/Tokens.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="16462" max-vertical-offset="37035">
+          <caret line="1138" column="28" selection-start-line="1138" selection-start-column="28" selection-end-line="1138" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/hsqldb/ParserCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5221053" vertical-offset="1132" max-vertical-offset="31785">
-          <caret line="135" column="10" selection-start-line="135" selection-start-column="10" selection-end-line="135" selection-end-column="10" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1357" max-vertical-offset="31785">
+          <caret line="142" column="32" selection-start-line="142" selection-start-column="32" selection-end-line="142" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/hsqldb/jdbc/JDBCStatement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5125786" vertical-offset="26449" max-vertical-offset="27195">
+          <caret line="1825" column="18" selection-start-line="1825" selection-start-column="18" selection-end-line="1825" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/hsqldb/tfidf/TfIdf.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="101" max-vertical-offset="750">
+          <caret line="23" column="41" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/hsqldb/tfidf/CosineSimilarity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="37" max-vertical-offset="630">
+          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/hsqldb/util/DatabaseManagerCommon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="4965">
+          <caret line="153" column="6" selection-start-line="153" selection-start-column="6" selection-end-line="153" selection-end-column="6" />
+          <folding>
+            <marker date="1454810688443" expanded="true" signature="12082:12332" placeholder="INSERT INTO ..." />
+            <marker date="1454810688443" expanded="true" signature="12368:12548" placeholder="INSERT INTO ..." />
+            <marker date="1454810688443" expanded="true" signature="12635:12727" placeholder="INSERT INTO ..." />
+            <marker date="1454810688443" expanded="true" signature="12824:12987" placeholder="INSERT INTO ..." />
+            <marker date="1454810688443" expanded="true" signature="13044:13086" placeholder="UPDATE Produ..." />
+            <marker date="1454810688443" expanded="true" signature="13131:13230" placeholder="UPDATE Item ..." />
+            <marker date="1454810688443" expanded="true" signature="13175:13229" placeholder="SELECT Price..Product..." />
+            <marker date="1454810688443" expanded="true" signature="13275:13381" placeholder="UPDATE Invoi..." />
+            <marker date="1454810688443" expanded="true" signature="13301:13380" placeholder="SELECT SUM(C..Item..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/hsqldb/tfidf/TfIdfMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="290" max-vertical-offset="765">
+          <caret line="38" column="24" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="39" />
+          <folding>
+            <element signature="e#256#257#0" expanded="true" />
+            <element signature="e#294#295#0" expanded="true" />
+            <element signature="e#340#341#0" expanded="true" />
+            <element signature="e#378#379#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/hsqldb/tfidf/DocumentParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="680" max-vertical-offset="1155">
+          <caret line="67" column="71" selection-start-line="67" selection-start-column="71" selection-end-line="67" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="475">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.58441556" vertical-offset="0" max-vertical-offset="22005">
+          <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
           <folding />
         </state>
       </provider>
